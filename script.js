@@ -10,6 +10,9 @@ for (let i = 0; i < 40; i++) {
   flowers.appendChild(flower);
 }
 
+// Audio file load ki gayi hai
+const bdaySong = new Audio('Khat Navjot Ahuja 128 Kbps.mp3');
+
 const gift = document.getElementById("gift");
 const wish = document.getElementById("wish");
 
@@ -56,7 +59,12 @@ function startConfetti() {
 
 }
 
+// 'Open Your Surprise' button click event
 document.getElementById("startBtn").onclick = function(){
+  // Button dabate hi gaana play hoga
+  bdaySong.play();
+
+  // Aur page smooth scroll ho kar gallery par jayega
   document.querySelector(".gallery").scrollIntoView({
     behavior:"smooth"
   });
